@@ -2,112 +2,27 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700" />
         <title>Rock Paper Scissors</title>
     </head>
     <body>
-        <script>
 
-                var win;
-                var loss;
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
 
-                function computerSelection()
-                    {
-                        function result()
-                        {
-                        return Math.floor(Math.random() * (4 - 1) + 1);
-                        }
+        <section class="game">
+            <h2>Take your pick!</h2>
+                <div class="buttons">
+                    <button id="rock">Rock</button>
+                    <button id="paper">Paper</button>
+                    <button id="scissors">Scissors</button>
+                </div>
+            <div class="picks"></div>    
+            <div class="result"></div>
+        </section>
 
-                        if(result() === 1)
-                        {
-                            return 'rock';
-                        }
-                        else if(result() === 2)
-                        {
-                            return 'paper';
-                        }
-                        else
-                        {
-                            return 'scissors';
-                        }
-                    }
-
-            function playRound(computerSelection, playerSelection)
-            {
-
-                if(computerSelection == 'rock' && playerSelection == 'scissors')
-                {
-                    console.log('You Lose! Rock beats Scissors');
-                    loss++;
-                }
-
-                else if(computerSelection == 'paper' && playerSelection == 'rock')
-                {
-                    console.log('You Lose! Paper beats Rock');
-                    loss++;
-                }
-                else if(computerSelection == 'scissors' && playerSelection == 'paper')
-                {
-                    console.log('You Lose! Scissors beats Paper');
-                    loss++;
-                }
-                else if(computerSelection == 'rock' && playerSelection == 'paper')
-                {
-                    console.log('You Win! Paper beats Rock');
-                    win++;
-                }
-                else if(computerSelection == 'paper' && playerSelection == 'scissors')
-                {
-                    console.log('You Win! Scissors beats Paper');
-                    win++
-                }
-                else if(computerSelection == 'scissors' && playerSelection == 'rock')
-                {
-                    console.log('You Win! Rock beats Scissors');
-                    win++;
-                }
-                else if(computerSelection == playerSelection)
-                {
-                    console.log('it\'s a draw, let\'s try again.');
-                }
-                else
-                {
-                    console.log('Try Again');
-                }
-            }
-
-            function game()
-            {
-                for(let i = 1; i <= 5; i++)
-                {
-                    if(i > 1)
-                        var playerSelection = window.prompt("Let's play again \n" + i + " out of 5 ");
-
-
-                    else
-                        playerSelection = window.prompt("Let's play rock paper scissors! \n" + i + " out of 5 ");
-
-                       
-                    playerSelection = playerSelection.toLowerCase();
-
-                    playRound(computerSelection(), playerSelection);
-
-                    if(i == 5)
-                    {
-                        if(win > loss)
-                        alert("You Win!");
-
-                        else(win < loss)
-                        alert("You Lose!");
-
-                        win = 0;
-                        loss = 0;
-                    }
-                }
-
-
-
-            }
-            
-        </script>
+        <script type="text/javascript" src="JS/script.js"></script>
     </body>
 </html>
