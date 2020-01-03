@@ -21,10 +21,11 @@ h2 {
 .game {
     padding: 30px 30px 60px;
     margin: auto;
-    max-width: 500px;
-    height: 500px;
+    max-width: 450px;
+    height: 300px;
     border: 1px solid #efefef;
     border-radius: 20px;
+    box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.1);
 }
 
 .result {
@@ -47,9 +48,13 @@ button {
     padding: 0.27rem 0.9rem;
     text-decoration: none;
     font-weight: 700;
+    margin: 2px;
 }
 
 button:hover,
 button:focus {
-    
+    cursor: pointer;
+    background:#da5b57;
+    border: 1px solid #da5b57;
+    box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.1);
 }

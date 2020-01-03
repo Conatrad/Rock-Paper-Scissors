@@ -1,7 +1,7 @@
 # Rock-Paper-Scissors
 
-This is a rock paper scissors game, you play by openeing your browswer console(ctrl + shift + i) and typing 'game()'.
+This is a rock paper scissors game played in the browser.
 
-You will then be prompted to input your choice of rock, paper, or scissors and will play a best of 5 round against the computer. 
+You will be met with a screen with a choice of either rock, paper or scissors. 
 
-Interface planned to be added in the future.
+Once you make your choice a computer will play against you and the result will be displayed.
