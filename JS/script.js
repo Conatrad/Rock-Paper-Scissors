@@ -4,6 +4,7 @@ let win = 0;
 let loss = 0;
 let games  = 0;
 
+//Randomly selects a number from 1 to 3
 computerSelection = () => {
 
     result = () => {
@@ -21,17 +22,7 @@ computerSelection = () => {
     }
 }
 
-buttons.forEach((button) => {
-
-    button.addEventListener('click', () => {
-
-        playGame(button.id, computerSelection());
-
-        picks.innerHTML = "Wins: " + win + " Losses: " + loss;
-
-    });
-});
-
+//Compares each input and determines winner
 playGame = (playerSelection, computerSelection) => {
 
     const result = document.querySelector('.result');
@@ -72,3 +63,15 @@ playGame = (playerSelection, computerSelection) => {
 
     games++;
 }
+
+//Displays the win/loss ratio
+buttons.forEach((button) => {
+
+    button.addEventListener('click', () => {
+
+        playGame(button.id, computerSelection());
+
+        picks.innerHTML = "Wins: " + win + " Losses: " + loss;
+
+    });
+});
